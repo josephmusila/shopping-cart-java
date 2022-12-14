@@ -136,12 +136,15 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         else {
                             loadingBar.dismiss();
+
                             Toast.makeText(LoginActivity.this,"Password is incorrect",Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else {
-                    Toast.makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, com.app.shopping.AdminCategoryActivity.class);
+                    startActivity(intent);
+//                    Toast.makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }
